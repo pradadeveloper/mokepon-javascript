@@ -1,60 +1,80 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <meta charset="utf-8" />
-    <title>MOKEPON!</title>
-    <script src="./js/mokepon.js"></script>
-    <link rel="stylesheet" href="./css/styles.css">
-</head>
+    <head>
+        <meta charset="utf-8" />
+        <title>MOKEPON!</title>
+        <link rel="stylesheet" href="./css/styles.css">
+    </head>
 
-<body>
-    
-    <section id="seleccionar-mascota">
-        <h1 class="title">MOKEPON 🔥💧🌱</h1>
+    <body>    
+        <section id="seleccionar-mascota">
+            <h1 class="title">MOKEPON 🔥💧🌱</h1>
 
-        <h2>Elige a tu mascota:</h2>
-        <label class="tarjeta-de-mokepon" for="hypoge">Hypoge</label>
-        <input type="radio" name="mascota" id="hypoge" />
+            <h2 class="subtitulo">Elige a tu mascota:</h2>
 
-        <label class="tarjeta-de-mokepon" for="capipego">Capipego</label>
-        <input type="radio" name="mascota" id="capipego" />
+            <div class="tarjetas">
+                <input type="radio" name="mascota" id="hypoge" />
+                <label class="tarjeta-de-mokepon" for="hypoge">
+                <p>Hypoge</p>
+                <img src="./assets/mokepons_mokepon_hipodoge_attack.webp" label="hipodoge">
+                </label>
 
-        <label class="tarjeta-de-mokepon" for="ratigueya">Ratigueya</label>
-        <input type="radio" name="mascota" id="ratigueya" />
-        <!-- Hypoge -> AGUA
-            Capipego -> TIERRA
-            Ratigueya -> FUEGO
-            Langostelvis -> AGUA y FUEGO
-            Tucapalma -> AGUA y TIERRA
-            Pydoc -> TIERRA y FUEGO -->
+                <input type="radio" name="mascota" id="capipego" />
+                <label class="tarjeta-de-mokepon" for="capipego">
+                    <p>Capipego</p>
+                <img src="./assets/mokepons_mokepon_capipepo_attack.webp" label="capipego">
+                </label>
 
-        <button id="seleccionarMascota">Seleccionar</button>
-    </section>
+                <input type="radio" name="mascota" id="ratigueya" />
+                <label class="tarjeta-de-mokepon" for="ratigueya">
+                    <p>Ratigueya</p>
+                <img src="./assets/mokepons_mokepon_ratigueya_attack.webp" label="ratigueya">
+                </label>
+            </div>
 
-    <section id="seleccionar-ataque">
-        <h1 class="title">MOKEPON 🔥💧🌱</h1>
-        <h2>Elige tu ataque:</h2>
+            <!-- Hypoge -> AGUA
+                Capipego -> TIERRA
+                Ratigueya -> FUEGO
+                Langostelvis -> AGUA y FUEGO
+                Tucapalma -> AGUA y TIERRA
+                Pydoc -> TIERRA y FUEGO -->
 
-        <p>Tu mascota <span id="mascota-jugador"></span> tiene <span id="vidas-jugador">3</span> vidas</p>
-        <p>La mascota <span id="mascota-enemigo"></span> del enemigo tiene <span id="vidas-enemigo">3</span> vidas</p>
+            <button id="seleccionarMascota">Seleccionar</button>
+        </section>
 
-        <p>
-            <button id="seleccionarFuego">FUEGO 🔥</button>
-            <button id="seleccionarAgua">AGUA 💧</button>
-            <button id="seleccionarTierra">TIERRA 🌱</button>
-        </p>
-    </section>
+        <section id="seleccionar-ataque">
+            <h1 class="title">MOKEPON 🔥💧🌱</h1>
 
-    <section id="mensajes">
-        
-    </section>
+            <h2 class="subtitulo">Elige tu ataque:</h2>
 
-    <section id="reiniciar">
-        <button id="reiniciar">Reiniciar</button>
-    </section>
+            <div class="tarjetas-ataques">
+                <button id="seleccionarFuego" class="boton-de-ataque">FUEGO 🔥</button>
+                <button id="seleccionarAgua" class="boton-de-ataque">AGUA 💧</button>
+                <button id="seleccionarTierra" class="boton-de-ataque">TIERRA 🌱</button>
+            </div>
 
+            <div id="mensajes">
+                <div id="resultado">Mucha suerte!!!</div>
 
-</body>
+                <section id="reiniciar">
+                    <button id="boton-reiniciar">Reiniciar</button>
+                </section>
+            </div>
 
+            <div class="ataques">
+                <div class="ataques-jugador">
+                    <p id="vidas-jugador">3</p>
+                    <p id="mascota-jugador"></p>
+                    <div id="ataques-del-jugador"></div>
+                </div>
+                <div class="ataques-enemigo">
+                    <p id="vidas-enemigo">3</p>
+                    <p id="mascota-enemigo"></p>
+                    <div id="ataques-del-enemigo"></div>
+                </div>
+            </div>
+        </section>
+        <script src="./js/mokepon.js"></script>
+    </body>
 </html>
